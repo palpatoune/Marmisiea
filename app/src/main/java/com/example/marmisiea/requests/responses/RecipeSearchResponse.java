@@ -6,14 +6,15 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+
 public class RecipeSearchResponse {
 
   @SerializedName("count")
-  @Expose()
-  private  int count;
+  @Expose
+  private int count;
 
   @SerializedName("recipes")
-  @Expose()
+  @Expose
   private List<Recipe> recipes;
 
   public int getCount() {

@@ -11,18 +11,16 @@ import com.example.marmisiea.util.Constants;
  */
 public class ServiceGenerator {
 
-  private static Retrofit.Builder retrofitBuilder = //instantiate retrofit instance
+  private static Retrofit.Builder retrofitBuilder =
           new Retrofit.Builder()
                   .baseUrl(Constants.BASE_URL)
-                  .addConverterFactory(GsonConverterFactory.create()); // to convert our http call result
+                  .addConverterFactory(GsonConverterFactory.create());
 
-  private static Retrofit retrofit = retrofitBuilder.build(); // we want to return an instance of this object
+  private static Retrofit retrofit = retrofitBuilder.build();
 
-  private  static RecipeApi recipeApi = retrofit.create(RecipeApi.class); // should be static
+  private static RecipeApi recipeApi = retrofit.create(RecipeApi.class);
 
-  public static RecipeApi getRecipeApi(){
+  public static RecipeApi getRecipeApi() {
     return recipeApi;
   }
-
-
 }

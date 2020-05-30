@@ -10,7 +10,7 @@ public class AppExecutors {
 
   private static AppExecutors instance;
 
-  public static AppExecutors getInstance(){
+  public static AppExecutors get(){
     if (instance == null){
       instance = new AppExecutors();
     }
@@ -20,7 +20,7 @@ public class AppExecutors {
   //schedule commands to run after a certain delay.
   private final ScheduledExecutorService mNetworkIO = Executors.newScheduledThreadPool(3); // creat a pool of 3 thread to do all the work
 
-  public ScheduledExecutorService NetworkIO(){
+  public ScheduledExecutorService networkIO(){
     return mNetworkIO;
   }
 }
