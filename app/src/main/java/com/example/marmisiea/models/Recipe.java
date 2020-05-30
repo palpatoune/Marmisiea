@@ -1,4 +1,4 @@
-package models;
+package com.example.marmisiea.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;

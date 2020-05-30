@@ -1,8 +1,8 @@
-package requests;
+package com.example.marmisiea.requests;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import util.Constants;
+import com.example.marmisiea.util.Constants;
 
 /**
 

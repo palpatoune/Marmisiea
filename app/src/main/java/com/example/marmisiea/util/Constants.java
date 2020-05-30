@@ -1,4 +1,4 @@
-package util;
+package com.example.marmisiea.util;
 
 public class Constants {
 
