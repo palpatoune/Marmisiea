@@ -24,11 +24,14 @@ android {
 }
 
 dependencies {
+    def retrofitVersion = "2.5.0"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"//use to make http request to the api
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion" // use it to convert json from request into java object
 }
