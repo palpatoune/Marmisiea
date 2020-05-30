@@ -24,7 +24,7 @@ android {
 }
 
 dependencies {
-    def lifecycle_version = "2.2.0"
+    def lifecycle_version = "1.1.1"
     def retrofitVersion = "2.5.0"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.2'
@@ -35,9 +35,8 @@ dependencies {
 
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"//use to make http request to the api
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion" // use it to convert json from request into java object
-    // ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
-    // LiveData
-    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    // ViewModel and LiveData
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+
 
 }

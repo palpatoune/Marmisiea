@@ -1,5 +1,9 @@
 package com.example.marmisiea;
 
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -15,6 +19,7 @@ import com.example.marmisiea.requests.ServiceGenerator;
 import com.example.marmisiea.requests.responses.RecipeResponse;
 import com.example.marmisiea.requests.responses.RecipeSearchResponse;
 import com.example.marmisiea.util.Constants;
+import com.example.marmisiea.viewmodels.RecipeListViewModel;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,15 +29,24 @@ public class RecipeListActivity extends BaseActivity {  //By extension it still 
 
   private static final String TAG = "RecipeListActivity";
 
+  private RecipeListViewModel mRecipeListViewModel;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_recipe_list);
 
-    findViewById(R.id.test).setOnClickListener(new View.OnClickListener() {
+    mRecipeListViewModel = ViewModelProviders.of(this).get(RecipeListViewModel.class);
+
+    subscribeObservers();
+  }
+
+
+  private void subscribeObservers (){
+    mRecipeListViewModel.getRecipe().observe(this, new Observer<List<Recipe>>() {
       @Override
-      public void onClick(View v) {
-        testRetrofitRequest();
+      public void onChanged(List<Recipe> recipes) {
+
       }
     });
   }
