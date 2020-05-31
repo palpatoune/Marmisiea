@@ -8,23 +8,16 @@ Ce projet fut réalisé dans le cadre d'une projet scolaire de création d'appli
 * Instalation d'Android Studio
 * Récupérer la branche master
 
-  https://github.com/palpatoune/Marmisiea.git
-
+ 
 ```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
+https://github.com/palpatoune/Marmisiea.git
 ```
 
-And repeat
+## Consigne Respecté
+
+* Clean Architecture & MVVM
+* Appels REST
+* Ecrans : 3activité, 1fragment
 
 ```
 until finished
