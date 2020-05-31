@@ -11,10 +11,13 @@ import androidx.lifecycle.ViewModel;
 
 public class RecipeListViewModel extends ViewModel {
 
+  private boolean mIsViewingRecipes;
   private RecipeRepository mRecipeRepository;
 
   public RecipeListViewModel() {
+    mIsViewingRecipes = false;
     mRecipeRepository = RecipeRepository.getInstance();
+
   }
 
   public LiveData<List<Recipe>> getRecipe(){
@@ -22,7 +25,15 @@ public class RecipeListViewModel extends ViewModel {
   }
 
   public void  searchRecipesApi(String query, int pageNumber){
+    mIsViewingRecipes = true;
     mRecipeRepository .searchRecipesApi(query,pageNumber);
   }
 
+  public boolean IsViewingRecipe() {
+    return mIsViewingRecipes;
+  }
+
+  public void setIsViewingRecipe(boolean mIsViewingRecipe) {
+    mIsViewingRecipes = mIsViewingRecipe;
+  }
 }
