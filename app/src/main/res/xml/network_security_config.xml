@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--We need this file to use api lvl 28 or higher to autorize the use of non https request-->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">static.food2fork.com</domain>
+    </domain-config>
+</network-security-config>
