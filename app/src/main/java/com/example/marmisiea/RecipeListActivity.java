@@ -14,6 +14,7 @@ import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.SearchView;
 
 import com.example.marmisiea.adapters.OnRecipeListener;
 import com.example.marmisiea.adapters.ReciperRecyclerAdapter;
@@ -68,12 +69,28 @@ public class RecipeListActivity extends BaseActivity implements OnRecipeListener
     mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
   }
 
-  private void  searchRecipesApi(String query, int pageNumber){
-    mRecipeListViewModel .searchRecipesApi(query,pageNumber);
+
+
+  private void initSearchView (){
+    final SearchView searchView = findViewById(R.id.search_view);
+    searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+      @Override
+      public boolean onQueryTextSubmit(String query) {
+        //when we submit, we actually use this one
+        mRecipeListViewModel .searchRecipesApi(query,1);
+        return false;
+      }
+
+      @Override
+      public boolean onQueryTextChange(String newText) {
+        //actualise digit by digit
+        return false;
+      }
+    });
   }
 
   private void testRetrofitRequest(){
-    searchRecipesApi("chicken", 1);
+
   }
 
 
