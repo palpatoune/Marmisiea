@@ -74,6 +74,7 @@ public class RecipeActivity extends BaseActivity {
       public void onChanged(Boolean aBoolean) {
         if(aBoolean == true && !mRecipeViewModel.isDidRetrieveRecipe()==false){
           Log.d(TAG, "onChanged: timedout" );
+          displayErrorScreen("error retrieving data. Check network connectio n");
         }
       }
     });
@@ -110,6 +111,34 @@ public class RecipeActivity extends BaseActivity {
 
   private void showParentLayout(){
     mScrollView.setVisibility(View.VISIBLE);
+  }
+
+  private void displayErrorScreen(String errorMessage){
+    mRecipeTitle.setText("Error retrieveing recipe...");
+    mRecipeRank.setText("");
+    TextView textView= new TextView(this);
+    if(!errorMessage.equals("")){
+      textView.setText(errorMessage);
+    }
+    else {
+      textView.setText("error");
+    }
+    textView.setTextSize(15);
+    textView.setLayoutParams(new LinearLayout.LayoutParams(
+            ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT
+    ));
+    mRecipeIngredientsContainer.addView(textView);
+    RequestOptions requestOptions = new RequestOptions()
+            .placeholder(R.drawable.ic_launcher_background);
+
+    Glide.with(this)
+            .setDefaultRequestOptions(requestOptions)
+            .load(R.drawable.ic_launcher_background)
+            .into(mRecipeImage);
+    showParentLayout();
+    showProgressBar(false);
+
+    mRecipeViewModel.setDidRetrieveRecipe(true);
   }
 
 }
