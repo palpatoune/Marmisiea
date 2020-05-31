@@ -8,7 +8,7 @@ Ce projet fut réalisé dans le cadre d'une projet scolaire de création d'appli
 * Instalation d'Android Studio
 * Récupérer la branche master
 
-![github-large](https://cdn.discordapp.com/attachments/619440024513150980/716703623320436786/Screenshot_20200531-192346_YouTube.jpg)
+
 
  
 ```
@@ -17,9 +17,37 @@ https://github.com/palpatoune/Marmisiea.git
 
 ## Consigne Respecté
 
-* Clean Architecture & MVVM
+
 * Appels REST
-* Ecrans : 3activité, 1fragment
+* Affichage d'une liste dans un RecyclerView
+* Affichage du détail d'un item de la liste
+* Les plus :
+** Gitflow propre
+** Clean Architecture & MVVM
+** Ecrans : 3activité, 1fragment
+** Data Model
+** Singleton
+** Design
+** Retrofit2
+** ExecutorBackground
+** Toolbar and SearchView
+** Menu
+** Pagination
+** Timeout
+** Logique du bouton retour
+
+
+## Fonctionnalités
+
+### Premier écran
+
+* Liste des catégorie de plat disponnible 
+
+![github-small](https://cdn.discordapp.com/attachments/272481362613633024/716765106628722750/Capture_decran_2020-05-31_a_23.27.57.png)
+
+
+
+
 
 ```
 until finished
