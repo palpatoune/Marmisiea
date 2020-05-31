@@ -14,7 +14,7 @@ import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.SearchView;
+import androidx.appcompat.widget.SearchView;
 
 import com.example.marmisiea.adapters.OnRecipeListener;
 import com.example.marmisiea.adapters.ReciperRecyclerAdapter;
@@ -26,6 +26,7 @@ import com.example.marmisiea.requests.responses.RecipeSearchResponse;
 import com.example.marmisiea.util.Constants;
 import com.example.marmisiea.util.Testing;
 import com.example.marmisiea.viewmodels.RecipeListViewModel;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -47,7 +48,7 @@ public class RecipeListActivity extends BaseActivity implements OnRecipeListener
 
     initRecyclerView();
     subscribeObservers();
-    testRetrofitRequest();
+    initSearchView();
   }
 
 
