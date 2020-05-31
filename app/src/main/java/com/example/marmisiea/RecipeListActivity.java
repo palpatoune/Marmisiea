@@ -1,6 +1,7 @@
 package com.example.marmisiea;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 
 import androidx.lifecycle.ViewModelProviders;
@@ -9,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.appcompat.widget.SearchView;
 
@@ -49,6 +52,8 @@ public class RecipeListActivity extends BaseActivity implements OnRecipeListener
       //display the search category
       displaySearchCategories();
     }
+    // associate custom toolbar with support action bar
+    setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
   }
 
   private void subscribeObservers(){
@@ -128,5 +133,19 @@ public class RecipeListActivity extends BaseActivity implements OnRecipeListener
       displaySearchCategories();
     }
 
+  }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    if(item .getItemId()== R.id.action_categories){
+      displaySearchCategories();
+    }
+    return super.onOptionsItemSelected(item);
+  }
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.recipe_search_menu, menu);
+    return super.onCreateOptionsMenu(menu);
   }
 }
