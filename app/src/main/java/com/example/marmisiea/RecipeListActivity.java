@@ -17,6 +17,7 @@ import com.example.marmisiea.adapters.RecipeRecyclerAdapter;
 import com.example.marmisiea.models.Recipe;
 
 import com.example.marmisiea.util.Testing;
+import com.example.marmisiea.util.VerticalSpacingItemDecorator;
 import com.example.marmisiea.viewmodels.RecipeListViewModel;
 
 
@@ -63,8 +64,11 @@ public class RecipeListActivity extends BaseActivity implements OnRecipeListener
 
   private void initRecyclerView(){
     mAdapter = new RecipeRecyclerAdapter(this);
+    VerticalSpacingItemDecorator itemDecorator = new VerticalSpacingItemDecorator(30);
+    mRecyclerView.addItemDecoration(itemDecorator);
     mRecyclerView.setAdapter(mAdapter);
     mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
   }
 
   private void initSearchView(){
