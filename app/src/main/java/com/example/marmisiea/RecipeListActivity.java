@@ -1,5 +1,6 @@
 package com.example.marmisiea;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
@@ -78,6 +79,14 @@ public class RecipeListActivity extends BaseActivity implements OnRecipeListener
     mRecyclerView.setAdapter(mAdapter);
     mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+    mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+      @Override
+      public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+        if(!mRecyclerView.canScrollVertically(1)){
+          mRecipeListViewModel.searchNextPage();
+        }
+      }
+    });
   }
 
   private void initSearchView(){
