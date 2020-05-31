@@ -1,35 +1,24 @@
 package com.example.marmisiea;
 
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModel;
-import androidx.lifecycle.ViewModelProvider;
+
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
-import android.nfc.Tag;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
+
 import androidx.appcompat.widget.SearchView;
 
 import com.example.marmisiea.adapters.OnRecipeListener;
 import com.example.marmisiea.adapters.ReciperRecyclerAdapter;
 import com.example.marmisiea.models.Recipe;
-import com.example.marmisiea.requests.RecipeApi;
-import com.example.marmisiea.requests.ServiceGenerator;
-import com.example.marmisiea.requests.responses.RecipeResponse;
-import com.example.marmisiea.requests.responses.RecipeSearchResponse;
-import com.example.marmisiea.util.Constants;
+
 import com.example.marmisiea.util.Testing;
 import com.example.marmisiea.viewmodels.RecipeListViewModel;
 
 
-import java.io.IOException;
-import java.util.ArrayList;
+
 import java.util.List;
 
 public class RecipeListActivity extends BaseActivity implements OnRecipeListener {  //By extension it still extend AppCompat

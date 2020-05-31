@@ -42,7 +42,6 @@ public class ReciperRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             .setDefaultRequestOptions(requestOptions)
             .load(mRecipes.get(i).getImage_url())
             .into(((RecipeViewHolder)viewHolder).image);
-
     ((RecipeViewHolder)viewHolder).title.setText(mRecipes.get(i).getTitle());
     ((RecipeViewHolder)viewHolder).publisher.setText(mRecipes.get(i).getPublisher());
     ((RecipeViewHolder)viewHolder).socialScore.setText(String.valueOf(Math.round(mRecipes.get(i).getSocial_rank())));
