@@ -26,6 +26,10 @@ public class RecipeRepository {
     mRecipeApiClient = RecipeApiClient.getInstance();
   }
 
+  public LiveData<Boolean> isRecipeRequestTimeout(){
+    return mRecipeApiClient.isRecipeRequestTimeout();
+  }
+
   public LiveData<List<Recipe>> getRecipes(){
     return mRecipeApiClient.getRecipes();
   }

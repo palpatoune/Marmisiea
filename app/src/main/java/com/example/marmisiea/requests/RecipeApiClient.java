@@ -29,6 +29,7 @@ public class RecipeApiClient {
   private RetrieveRecipesRunnable mRetrieveRecipesRunnable;
   private MutableLiveData<Recipe> mRecipe;
   private RetrieveRecipeRunnable mRetrieveRecipeRunnable;
+  private MutableLiveData<Boolean> mRecipeRequestTimeout =  new MutableLiveData<>();
 
 
 
@@ -42,6 +43,10 @@ public class RecipeApiClient {
   private RecipeApiClient() {
     mRecipes = new MutableLiveData<>();
     mRecipe = new MutableLiveData<>();
+  }
+
+  public LiveData<Boolean> isRecipeRequestTimeout(){
+    return mRecipeRequestTimeout;
   }
 
   public LiveData<List<Recipe>> getRecipes(){
@@ -80,6 +85,7 @@ public class RecipeApiClient {
       @Override
       public void run() {
         //let's the user know it's timed out
+        mRecipeRequestTimeout.postValue(true );
         handler.cancel(true);
       }
     }, NETWORK_TIMEOUT, TimeUnit.MILLISECONDS);
