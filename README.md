@@ -8,6 +8,8 @@ Ce projet fut réalisé dans le cadre d'une projet scolaire de création d'appli
 * Instalation d'Android Studio
 * Récupérer la branche master
 
+  https://github.com/palpatoune/Marmisiea.git
+
 ```
 Give examples
 ```
