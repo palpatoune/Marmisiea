@@ -8,7 +8,7 @@ Ce projet fut réalisé dans le cadre d'une projet scolaire de création d'appli
 * Instalation d'Android Studio
 * Récupérer la branche master
 
-https://cdn.discordapp.com/attachments/619440024513150980/716703623320436786/Screenshot_20200531-192346_YouTube.jpg
+![github-large](https://cdn.discordapp.com/attachments/619440024513150980/716703623320436786/Screenshot_20200531-192346_YouTube.jpg)
 
  
 ```
