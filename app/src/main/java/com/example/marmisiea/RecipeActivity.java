@@ -74,7 +74,7 @@ public class RecipeActivity extends BaseActivity {
       public void onChanged(Boolean aBoolean) {
         if(aBoolean == true && !mRecipeViewModel.isDidRetrieveRecipe()==false){
           Log.d(TAG, "onChanged: timedout" );
-          displayErrorScreen("error retrieving data. Check network connectio n");
+          //displayErrorScreen("error retrieving data. Check network connectio n"); bugged
         }
       }
     });
