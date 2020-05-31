@@ -47,8 +47,6 @@ public class RecipeListActivity extends BaseActivity implements OnRecipeListener
     initRecyclerView();
     subscribeObservers();
     testRetrofitRequest();
-
-
   }
 
 
