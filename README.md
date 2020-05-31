@@ -35,6 +35,7 @@ https://github.com/palpatoune/Marmisiea.git
 ** Pagination
 ** Timeout
 ** Logique du bouton retour
+** Progress Bar
 
 
 ## Fonctionnalités
@@ -43,8 +44,20 @@ https://github.com/palpatoune/Marmisiea.git
 
 * Liste des catégorie de plat disponnible 
 
-![github-small](https://cdn.discordapp.com/attachments/272481362613633024/716765106628722750/Capture_decran_2020-05-31_a_23.27.57.png)
+![github-small](https://cdn.discordapp.com/attachments/272481362613633024/716766115375874128/Capture_decran_2020-05-31_a_23.32.34.png)
 
+
+### Deuxième écran
+
+* Liste des recettes disponniblent
+
+![github-small](https://cdn.discordapp.com/attachments/272481362613633024/716766115375874128/Capture_decran_2020-05-31_a_23.32.34.png)
+
+### Troisième écran
+
+* Affichage de la recette
+
+![github-small](https://cdn.discordapp.com/attachments/272481362613633024/716766826494951424/Capture_decran_2020-05-31_a_23.35.19.png)
 
 
 
