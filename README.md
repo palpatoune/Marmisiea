@@ -21,21 +21,21 @@ https://github.com/palpatoune/Marmisiea.git
 * Appels REST
 * Affichage d'une liste dans un RecyclerView
 * Affichage du détail d'un item de la liste
-* Les plus :
-** Gitflow propre
-** Clean Architecture & MVVM
-** Ecrans : 3activité, 1fragment
-** Data Model
-** Singleton
-** Design
-** Retrofit2
-** ExecutorBackground
-** Toolbar and SearchView
-** Menu
-** Pagination
-** Timeout
-** Logique du bouton retour
-** Progress Bar
+### Les plus :
+* Gitflow propre
+* Clean Architecture & MVVM
+* Ecrans : 3activité, 1fragment
+* Data Model
+* Singleton
+* Design
+* Retrofit2
+* ExecutorBackground
+* Toolbar and SearchView
+* Menu
+* Pagination
+* Timeout
+* Logique du bouton retour
+* Progress Bar
 
 
 ## Fonctionnalités
@@ -51,7 +51,12 @@ https://github.com/palpatoune/Marmisiea.git
 
 * Liste des recettes disponniblent
 
-![github-small](https://cdn.discordapp.com/attachments/272481362613633024/716766115375874128/Capture_decran_2020-05-31_a_23.32.34.png)
+![github-small](https://cdn.discordapp.com/attachments/272481362613633024/716765205299724388/Capture_decran_2020-05-31_a_23.28.55.png)
+
+![github-small](https://cdn.discordapp.com/attachments/272481362613633024/716767651363422218/Capture_decran_2020-05-31_a_23.38.14.png
+)
+
+
 
 ### Troisième écran
 
@@ -62,62 +67,10 @@ https://github.com/palpatoune/Marmisiea.git
 
 
 
-```
-until finished
-```
 
-End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+## Auteur
+* **Simon ledoit** 
 
-Explain how to run the automated tests for this system
 
-### Break down into end to end tests
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
