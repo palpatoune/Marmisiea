@@ -29,6 +29,7 @@ https://github.com/palpatoune/Marmisiea.git
 * Singleton
 * Design
 * Retrofit2
+* Cancel Retrofit request
 * ExecutorBackground
 * Toolbar and SearchView
 * Menu
